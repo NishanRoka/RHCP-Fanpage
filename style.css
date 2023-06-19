@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+@import url("https://fonts.googleapis.com/css?family=Metal Mania");
+
+@font-face {
+    font-family: "BOOTERFF";
+    src: url("fonts/BOOTERFF.ttf");
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #777;
+}
+
+
+@font-face {
+    font-family: "Abel-Regular";
+    src: url("fonts/Abel-Regular.ttf");
+}
+
+html, body{  
+    /*This removes the space between header and main html*/
+    margin: 0px;
+    padding: 0px;
+}
+.nav ul{  /*This removes space created by ul between header and main html*/
+    margin: 0px;
+}
+
+.nav li{
+    display: inline; /*To display the list of navs on the same line unlike looking like list*/
+}
+
+.nav a{
+    display: inline-block;
+    margin: 1em;
+    padding: .3em;
+    color: white;
+    text-decoration: none; /*Removes underlines and stuffs*/
+}
+.nav a:hover{
+    background-color: rgba(124, 109, 109, 0.7); /*bg color when user is hovering over*/
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3); /*Creates an underline at the bottom of the nav*/
+}
+
+.main-nav li{
+    padding: 0 5%;  /*padding 0 up and down, 5% left and right*/
+}
+.main-header{
+    background-color: rgba(0, 0, 0, .3);
+    background-image: url("images/psyche.jpg");
+    background-blend-mode:multiply;
+    background-size: cover;
+    padding-bottom: 10px;
+}
+
+.band-name{
+    color: rgba(235, 221, 221, 0.9);
+    text-align: center;
+    font-size: 4em;
+    font-family: "BOOTERFF";
+    font-weight: lighter;
+    font-style: normal;
+    padding-top: 40px;
+}
+
+.band-name-large{
+    font-size: 4em;
+}
+
+.section-header{
+    font-family: "Metal Mania";
+    text-align: center;
+    font-size: 2em;
+    font-weight: #777; 
+}
+
+.content-section{
+    margin: 1em; /*separates the content section from others*/
+}
+
+.container{
+    max-width: 900px; /*Contents inside the containers does not grow as per the screen*/
+    margin: 0 auto; /*0 margin top and bottom, auto left and right
+                        So content always remain at the center*/
+    padding: 0 1.5em; /*Give a bit of space on leftand right*/
+}
+
+.band-image{
+    width: 300px;
+    height: 275px;
+    float: left; /*Floats the image to the left*/
+    margin: 15px; /*Margin of 15px on all sided*/
+    border-radius: 50%; /*Radius of 50% from center one side to another*/
+}
+
+
+.main-footer{
+    background-color:rgba(27, 17, 17, 0.3);
+    color: white;
+    padding: 0.25em 0;
+
+}
+
+
+.band-name-footer{
+    font-size: 2.5em;
+}
+
+
+.main-footer-container{
+    display: flex; /*Using the flexbox to display contents side by side*/
+    align-items: center; /*Aligns all the items to center*/
+    margin: .5em;
+    padding: 0 .5em;
+}
+
+.main-footer-container ul{
+    flex-grow: 1; /*allows the content to go as far as possible*/
+    text-align: end; /*pushes the content to the end*/
+}
+
+
+.footer-nav{
+    padding: 0 .5em;
+}
+
+.logo{
+    width: 70px;
+    height: 50px;
+}
+
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;  
+}
+
+.album-btn{
+    margin: 0 15% 0 15%;
+    color: white;
+    border: 2px solid rgb(233, 98, 74);
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-family: "Metal Mania";
+    font-size: 1.2em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.album-btn:hover{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.play-btn{
+                    /*Since button is not a block, it'll align left.
+                    To align it to center, we display it as a block*/
+   font-size: 4em;
+   border-radius: 50%; 
+   color: rgba(150, 125, 121, 0.9);
+   padding: 0;
+   font-size: 3em;
+
+   width: 70px;
+   height: 70px;
+
+}
+
+.tour-row{
+    margin-bottom: 2em;
+    border-bottom: 2px solid rgba(0, 0, 0, .3);
+}
+
+.tour-row:last-child{ /*To remove border-bottom from last line*/
+    border-bottom: none;
+}
+
+.tour-items{
+    display: inline-block;
+    padding-right:.5em;
+}
+
+.tour-date{
+    color: #555;
+    font-weight: bold;
+    width: 11%;
+}
+
+.tour-place{
+    width: 24%;
+}
+.tour-venue{
+    width: 42%;
+}
+.primary-button{
+    max-width: 19%; /*max-width instead of width so that btn does not increase with size*/
+}
+.primary-button{
+    color: white;
+    border-radius: .3em;
+    background-color: #56ccf2;
+    border: none;
+}
+
+.primary-button:hover{
+    background-color: #2D9CDB;
+}
+/*Inside the content-section, we label the outermost div as
+store-item. All the items extend that class.*/
+
+.store-item{
+    margin: 30px; /*So that items wont get too close to each other*/
+}
+
+.store-item-title{
+    display: block; /*displays the content on a single line as a block*/
+    width: 100%; /*It takes entire line above the image*/
+    font-weight: bold; /*Makes the font slightly bolder*/
+    text-align: center; /*It centers the text*/
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.store-item-img{
+    height: 250px;
+}
+.tote-bag{
+    height: 350px;
+}
+.store-item-details{
+    display: flex; /*display the content horizontally rather than vertically*/
+    align-items: center;
+    padding: 5px;
+}
+
+.store-item-price{
+    flex-grow: 1; /*grows the price as big as possible*/
+    color: #333;
+    font-weight: bold;
+}
+.store-item-btn{
+    max-width: 40%;
+}
+
+.store-items{
+    display: flex;
+    flex-wrap: wrap; /*If the items get too big, it wraps the next line if the screen is too small.
+                        Or else all the items on the same line if the screen is big*/
+    justify-content: space-around; /*Space between items when flexing*/
+}
+
+.cart-header{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-column{
+    display: flex;
+    align-items: center; /*Align all the items on the center*/
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 3px;
+    margin-top: 10px;
+}
+
+.cart-row{
+    display: flex; /*display all the items on the same line*/
+}
+
+/*Align all the items as per their widths*/
+
+.cart-item{
+    width: 45%;
+}
+.cart-price{
+    width:20%
+}
+.cart-quantity{
+    width: 35%;
+}
+.cart-item-title{
+    color: #333;
+    font-weight: bold;
+    margin-left: .5em;
+}
+.cart-item-price{
+    color: #333;
+    font-weight: bold;
+}
+.cart-img{
+    height: 75px;
+    width: auto;
+}
+.cart-input{
+    height: 27px;
+    width: 43px;
+    color: #333;
+    background-color: #eee;
+    border: 1px solid #2D9CDB;
+    border-radius: .3em;
+    margin-right: .2em;
+
+}
+
+
+.cart-row:last-child{  /*First put the all the cart-row in a div
+                        And then select the last child to add BB*/
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column{ /*Select the last colum to remove border*/
+    border: none;
+}
+.cart-total{
+    display: block;
+    text-align: end;
+    align-items: center;
+    margin-top: 1.5em;
+    margin-right: 20px;
+}
+
+
+
+.total{
+    color: #333;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 1.5em;
+    
+}
+.total-price{
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.remove-btn{
+    color: white;
+    background-color: red;
+    border-radius: .3em;
+    border: none;
+
+}
+
+
+.remove-btn:hover{
+    background-color: rgba(223, 76, 76, 0.9);
+}
+
+.purch-btn{
+    display: block;
+    margin: 40px auto 40px auto;
+    max-width: fit-content;
+    font-size: 1.7em;
+}
