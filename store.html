@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Red Hot Chilli Peppers | Store</title>
+        <!--If this webpage was uploaded on the internet. information in the meta tag will be shown below the website-->
+        <meta name="description" content="Red Hot Chilli Peppers">
+        <link rel="stylesheet" href="style.css" />
+        <script src="store.js" async></script> <!--async will download store.js in the background while 
+                                                    all the other contents are being downloaded. -->
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href = "index.html">HOME</a></li>
+                    <li><a href="store.html">STORE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">Red Hot Chilli Peppers</h1>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">MUSIC</h2>
+            <div class="store-items">
+                <div class="store-item"> 
+                    <span class="store-item-title">Blood Sugar Sex Magik</span>
+                    <img class="store-item-img" src="images/BSSM.jpg">
+                    <div class="store-item-details">
+                        <span class="store-item-price">$12.99</span>
+                        <button class="btn primary-button store-item-btn"role="button" class="btn">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <span class="store-item-title">Californication</span>
+                    <img class="store-item-img" src="images/Californication.jpg">
+                    <div class="store-item-details">
+                        <span class="store-item-price">$15.99</span>
+                        <button class="btn primary-button store-item-btn"role="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <span class="store-item-title">Stadium Arcadium</span>
+                    <img class="store-item-img" src="images/stadium-arcadium.png">
+                    <div class="store-item-details">
+                        <span class="store-item-price">$15.99</span>
+                        <button class="btn primary-button store-item-btn" role="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <span class="store-item-title">Return of the Dream Canteen</span>
+                    <img class="store-item-img" src="images/ROTDC.jpg">
+                    <div class="store-item-details">
+                        <span class="store-item-price">$11.99</span>
+                        <button class="btn primary-button store-item-btn"role="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">MERCH</h2> 
+            <div class="store-items">
+                <div class="store-item">
+                    <span class="store-item-title">RHCP Bomber</span>
+                    <img class="store-item-img" src="images/Bomber.png">
+                    <div class="store-item-details">
+                        <span class="store-item-price">$199.90</span>
+                        <button class="btn primary-button store-item-btn" role="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <span class="store-item-title">Band T-Shirt</span>
+                    <img class="store-item-img" src="images/T.png">
+                    <div class="store-item-details">
+                        <span class="store-item-price">$59.90</span>
+                        <button class="btn primary-button store-item-btn" role="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <span class="store-item-title">RHCP Tote Bag</span>
+                    <img class="store-item-img tote-bag" src="images/Tote.png">
+                    <div class="store-item-details">
+                        <span class="store-item-price">$49.99</span>
+                        <button class="btn primary-button store-item-btn" role="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="container content-section main-cart">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>                
+            </div>
+            <div class="cart-items">
+                <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-img" src="images/BSSM.jpg" >
+                        <span class="cart-item-title">Blood Sugar Sex Magik</span>
+                    </div>
+                    <span class="cart-price cart-column cart-item-price">$12.99</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-input" type="number" value="1">
+                        <button class="btn remove-btn" role="button">REMOVE</button>
+                    </div>
+                    
+                </div>
+                <div class="cart-row">
+                    <div class="cart-item cart-column"> 
+                        <img class="cart-img" src="images/Tote.png" >
+                        <span class="cart-item-title">Band Tee</span>
+                    </div>
+                    <span class="cart-price cart-column cart-item-price">$59.90</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-input" type="number" value="1">
+                        <button  class="btn remove-btn" role="button">REMOVE</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="cart-row cart-total">
+                <span class="total">Total</span>
+                <span class="total-price">$77</span>
+            </div>
+            <button class="btn primary-button purch-btn" role="button">PURCHASE</button>
+            
+            
+        </section>
+        
+        <footer class="main-footer">
+            <div class="main-footer-container">
+                <h3 class="band-name band-name-footer">Red Hot Chilli Peppers</h3>
+                <ul class="nav">
+                    <li>
+                        <a href="https://facebook.com", target="_blank">
+                            <img src="images/FB.png" alt="Facebook" width="80px" height ="50px">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com", target="_blank">
+                            <img src="images/YT.png" alt="Youtube" width="80px" height ="50px">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://spotify.com", target="_blank">
+                            <img src="images/Spotify.png" alt="Spotify" width="80px" height ="80px">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
