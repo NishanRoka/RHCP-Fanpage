@@ -30,9 +30,9 @@ function main(){
         let atcButton = addToCartButton[i];
         atcButton.addEventListener('click', addToCart);
     //add functionality to add to cart button
-    var addToCartButton = document.getElementsByClassName('store-item-btn');
-    for(var i = 0; i < addToCartButton.length; i++){
-        var atcButton = addToCartButton[i];
+    let addToCartButton = document.getElementsByClassName('store-item-btn');
+    for(let i = 0; i < addToCartButton.length; i++){
+        let atcButton = addToCartButton[i];
         atcButton.addEventListener('click', addToCart);
        
     }
@@ -44,7 +44,7 @@ function main(){
 function purchClicked(){
     alert('Thank you for the purchase.')
     //what we wanna do is, empty the cart after purch-btn is clicked
-    var cartItemz = document.getElementsByClassName('cart-items')[0];
+    let cartItemz = document.getElementsByClassName('cart-items')[0];
     while(cartItemz.hasChildNodes()){ //while the cartItemz has children, keeo removing the first child to make the cart-row empty
         cartItemz.removeChild(cartItemz.firstChild);
     }
@@ -67,39 +67,31 @@ function quantityChanged(event){
 }
 
 function addToCart(event){
-<<<<<<< HEAD
     let atcButton = event.target;
     let storeItem = atcButton.parentElement.parentElement;
     let cartItemTitle = storeItem.getElementsByClassName('store-item-title')[0].innerText;
     let cartItemImage = storeItem.getElementsByClassName('store-item-img')[0].src;
     let cartItemPrice = storeItem.getElementsByClassName('store-item-price')[0].innerText;
 
-=======
-    var atcButton = event.target;
-    var storeItem = atcButton.parentElement.parentElement;
-    var cartItemTitle = storeItem.getElementsByClassName('store-item-title')[0].innerText;
-    var cartItemImage = storeItem.getElementsByClassName('store-item-img')[0].src;
-    var cartItemPrice = storeItem.getElementsByClassName('store-item-price')[0].innerText;
->>>>>>> 40743593747f1b1855e1e6708a658f3cf1553b90
     console.log(cartItemTitle, cartItemImage,cartItemPrice);
     addItemsToCart(cartItemTitle, cartItemPrice, cartItemImage);
     updateCartTotal(); //total here so that total is updated right after we add item to the cart
 }
 
 function addItemsToCart(cartItemTitle, cartItemPrice, cartItemImage){
-    var cartRow = document.createElement('div'); //create e new div so it can be added to cart-row
+    let cartRow = document.createElement('div'); //create e new div so it can be added to cart-row
     cartRow.classList.add('cart-row'); //add the actual class cart-row to cartRow
-    var cartItems = document.getElementsByClassName('cart-items')[0]; //get the cart-items
-    var cartItemsNames = document.getElementsByClassName('cart-item-title');
+    let cartItems = document.getElementsByClassName('cart-items')[0]; //get the cart-items
+    let cartItemsNames = document.getElementsByClassName('cart-item-title');
     //check if the item is alredy in the cart by comparing array of cart-item-title with store-item-title.innertext
-    for(var i = 0; i < cartItemsNames.length; i++){
+    for(let i = 0; i < cartItemsNames.length; i++){
         if(cartItemsNames[i].innerText == cartItemTitle){
             alert('Item is already in the cart');
             return //here we exit out of the function.
         }
     }
     //use a html format so that its easier to to add to the cart
-    var cartRowContents = `
+    let cartRowContents = `
         <div class="cart-item cart-column">
             <img class="cart-img" src="${cartItemImage}" >
             <span class="cart-item-title">${cartItemTitle}</span>
@@ -138,7 +130,7 @@ function updateCartTotal(){
     total = Math.round(total * 100)/100 //rounding of the total to 2 decimal unit
     document.getElementsByClassName('total-price')[0].innerText = '$' + total;
 }
-
+}
 
 
 
