@@ -1,0 +1,1 @@
+I have created a website for Red Hot Chilli Peppers (American band). The website has three main features: a home page through which people can buy tickets to arbitrary concerts, a store page where fans can buy their merchandise, an about page which contains the description of the band. 
