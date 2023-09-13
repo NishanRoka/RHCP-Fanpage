@@ -13,10 +13,6 @@ function main(){
             alert('ticket processing coming soon')
         })
     }
-    
-
-    
-    
-    
+  
 }
 
