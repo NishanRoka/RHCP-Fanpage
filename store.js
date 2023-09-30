@@ -24,11 +24,6 @@ function main(){
         let input = cartInputBtn[i];
         input.addEventListener('change', quantityChanged);
     }
-
-    let addToCartButton = document.getElementsByClassName('store-item-btn');
-    for(let i = 0; i < addToCartButton.length; i++){
-        let atcButton = addToCartButton[i];
-        atcButton.addEventListener('click', addToCart);
     //add functionality to add to cart button
     let addToCartButton = document.getElementsByClassName('store-item-btn');
     for(let i = 0; i < addToCartButton.length; i++){
@@ -42,6 +37,7 @@ function main(){
 }
 //if we were to track any event, we will pass event as a parameter to the function but we are not.
 function purchClicked(){
+    const cartItems = document.querySelector('.cart-items')
     alert('Thank you for the purchase.')
     //what we wanna do is, empty the cart after purch-btn is clicked
     let cartItemz = document.getElementsByClassName('cart-items')[0];
@@ -49,6 +45,8 @@ function purchClicked(){
         cartItemz.removeChild(cartItemz.firstChild);
     }
     updateCartTotal();
+    
+    
 }
 
 
@@ -72,7 +70,6 @@ function addToCart(event){
     let cartItemTitle = storeItem.getElementsByClassName('store-item-title')[0].innerText;
     let cartItemImage = storeItem.getElementsByClassName('store-item-img')[0].src;
     let cartItemPrice = storeItem.getElementsByClassName('store-item-price')[0].innerText;
-
     console.log(cartItemTitle, cartItemImage,cartItemPrice);
     addItemsToCart(cartItemTitle, cartItemPrice, cartItemImage);
     updateCartTotal(); //total here so that total is updated right after we add item to the cart
@@ -130,8 +127,3 @@ function updateCartTotal(){
     total = Math.round(total * 100)/100 //rounding of the total to 2 decimal unit
     document.getElementsByClassName('total-price')[0].innerText = '$' + total;
 }
-}
-
-
-
-
